@@ -1,3 +1,4 @@
+import Head from "next/head"
 import Hero from "@/components/Hero"
 import Container from "@/components/Container"
 import PostBody from "@/components/PostBody"
@@ -5,10 +6,14 @@ import Contact from "@/components/Contact"
 import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from "@/components/two-column"
 import Image from 'next/image'
 import eyecatch from '../../images/Copilot_20260601_221714.png'
+import Social from "@/components/Social"
 
 export default function About() {
   return (
     <Container>
+      <Head>
+        <title>アバウト</title>
+      </Head>
       <Hero
           title = "About"
           subtitle="About development activities"
@@ -45,6 +50,7 @@ export default function About() {
           </TwoColumnMain>
           <TwoColumnSidebar>
             <Contact />
+            <Social />
           </TwoColumnSidebar>
         </TwoColumn>
     </Container>
