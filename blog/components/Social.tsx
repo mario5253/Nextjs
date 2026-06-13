@@ -7,25 +7,22 @@ import {
   faGithub,
 } from '@fortawesome/free-brands-svg-icons'
 
-export default function Social({iconSize = 'initial'}) {
+export default function Social({iconSize = 'initial'}: {iconSize?: string}) {
   return(
-    <ul className={styles.list} style={{'--icon-size': iconSize}}>
+    <ul className={styles.list} style={{'--icon-size': iconSize} as React.CSSProperties}>
       <li>
         <a href="https://twitter.com/">
           <FontAwesomeIcon icon={faTwitter}/>
-          <span className='sr-only'>Twitter</span>
         </a>
       </li>
       <li>
         <a href="https://facebook.com/">
           <FontAwesomeIcon icon={faFacebookF}/>
-          <span className='sr-only'>Facebook</span>
         </a>
       </li>
       <li>
         <a href="https://github.com/">
           <FontAwesomeIcon icon={faGithub}/>
-          <span className='sr-only'>Github</span>
         </a>
       </li>
     </ul>

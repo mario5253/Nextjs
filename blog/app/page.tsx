@@ -1,6 +1,10 @@
 import Hero from "@/components/Hero";
 import Container from "@/components/Container";
-export default function Home() {
+import {getAllPosts} from '@/lib/api'
+import Posts from "@/components/Posts";
+import Pagenation from "@/components/PageNation";
+export  default async function Home() {
+  const posts = await getAllPosts(4)
   return (
     <Container>
         <Hero
@@ -8,6 +12,8 @@ export default function Home() {
         subtitle = "アウトプットしていくサイト"
         imageOn
          />
+         <Posts posts={posts} />
+         <Pagenation nextUrl="/blog" nextText="More Posts" />
     </Container>
   );
 }

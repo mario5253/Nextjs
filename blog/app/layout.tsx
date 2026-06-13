@@ -1,15 +1,24 @@
+// app/layout.tsx
+import "@/styles/global.css"
 import Layout from "@/components/layout"
-import '@/styles/global.css'
 
-export default function MyApp({children}: {Component, pageProps}) {
+export const metadata = {
+  title: "サイトタイトル",
+  description: "説明文",
+}
+
+export default function RootLayout({ 
+  children,
+ }: {
+  children: React.ReactNode
+ }) {
   return (
     <html lang="ja">
       <body>
-        <Layout >
+        <Layout>
           {children}
-        </Layout>   
+        </Layout>
       </body>
     </html>
-
   )
 }

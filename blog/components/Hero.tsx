@@ -1,6 +1,14 @@
 import styles from '@/styles/hero.module.css'
 
-export default function Hero({ title , subtitle, imageOn = false}) {
+export default function Hero({ 
+  title ,
+  subtitle,
+  imageOn = false
+}: {
+  title: string
+  subtitle: string
+  imageOn: boolean
+}) {
   return (
     <div className={styles.flexContainer}>
       <div className={styles.text}>
